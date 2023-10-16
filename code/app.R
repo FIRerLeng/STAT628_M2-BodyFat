@@ -14,8 +14,8 @@ calculation<-function(abdome,chest,hip,thigh,age){
   return(bodyfat)
 }
 
-##############下面是shiny部分，只要等数据和一下allplot#########################
-##############现在的问题是逆标准化回来##########################################
+##############shiny#########################
+
 ui <- fluidPage(
   titlePanel("BodyFat Analysis in your agegroup"),
   sidebarLayout(
@@ -44,10 +44,10 @@ server <- function(input, output) {
     chest <- as.numeric(input$chest)
     hip <- as.numeric(input$hip)
     thigh <- as.numeric(input$thigh)
-    
+    # agegroup decision
     ageGroup <- ifelse(age <= 40, "young(20-40)", ifelse(age <= 60, "middle-age(41-60)", "elder(>61)"))
    
-    # 计算体脂率，这里需要根据你的计算函数做相应的调整
+    # calculation
     BodyFat <- calculation(abdome, chest, hip, thigh, age)
     fitGroup <- ifelse(BodyFat<=15,"athlete",ifelse(BodyFat<=20,"fitness",ifelse(BodyFat<=30,"normal","obsess")))
     
