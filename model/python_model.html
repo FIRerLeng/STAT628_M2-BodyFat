@@ -15297,6 +15297,7 @@ testing r2 score: 0.6243825961132723
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">et_0</span><span class="p">,</span> <span class="n">et_1</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;e_t&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;e_(t+1)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;image/residual.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15310,20 +15311,6 @@ testing r2 score: 0.6243825961132723
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>Text(0, 0.5, &#39;e_(t+1)&#39;)</pre>
-</div>
-
-</div>
 
 <div class="jp-OutputArea-child">
 
@@ -15358,6 +15345,7 @@ jp-needs-light-background
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">stats</span><span class="o">.</span><span class="n">probplot</span><span class="p">(</span><span class="n">et</span><span class="p">,</span> <span class="n">dist</span> <span class="o">=</span> <span class="s1">&#39;norm&#39;</span><span class="p">,</span> <span class="n">plot</span> <span class="o">=</span> <span class="n">plt</span><span class="p">)</span>    
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;image/Q_Q.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15371,44 +15359,6 @@ jp-needs-light-background
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>((array([-2.21154155, -1.84175131, -1.62365924, -1.46329903, -1.33363779,
-         -1.22318558, -1.1259265 , -1.03829303, -0.95798431, -0.88342315,
-         -0.81347686, -0.74730127, -0.68424773, -0.62380483, -0.5655602 ,
-         -0.50917466, -0.45436405, -0.40088629, -0.34853176, -0.29711609,
-         -0.24647455, -0.19645772, -0.14692788, -0.09775611, -0.0488197 ,
-          0.        ,  0.0488197 ,  0.09775611,  0.14692788,  0.19645772,
-          0.24647455,  0.29711609,  0.34853176,  0.40088629,  0.45436405,
-          0.50917466,  0.5655602 ,  0.62380483,  0.68424773,  0.74730127,
-          0.81347686,  0.88342315,  0.95798431,  1.03829303,  1.1259265 ,
-          1.22318558,  1.33363779,  1.46329903,  1.62365924,  1.84175131,
-          2.21154155]),
-  array([-17.76630384,  -9.5479013 ,  -7.68889632,  -6.33998806,
-          -4.93255738,  -3.98324447,  -3.43656879,  -3.29910202,
-          -2.0326147 ,  -1.98285493,  -1.7677992 ,  -1.56812215,
-          -1.12134587,  -1.01121702,  -0.92040437,  -0.87753107,
-          -0.69344821,  -0.64347607,  -0.61925812,  -0.59416258,
-          -0.45155663,   0.04128237,   0.12632499,   0.24033267,
-           0.41316399,   0.44987722,   0.68314786,   0.86654374,
-           0.87143253,   1.00933331,   1.3183101 ,   1.57644672,
-           1.8430355 ,   1.9489348 ,   2.3420849 ,   2.46691079,
-           2.51194878,   2.67998168,   2.76313641,   2.81681378,
-           3.02218772,   3.19983768,   3.59530785,   4.03130812,
-           4.47729082,   4.49087483,   4.99805175,   5.79521124,
-           6.39084253,   7.10876912,   9.24443862])),
- (4.2458717989292865, 0.2361727320102295, 0.9418107037680797))</pre>
-</div>
-
-</div>
 
 <div class="jp-OutputArea-child">
 
@@ -15454,7 +15404,7 @@ jp-needs-light-background
 <span class="n">l1</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]],</span> <span class="p">[</span><span class="n">y1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y1</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">)</span>
 <span class="n">l2</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="n">y2</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">y2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;95% CI&#39;</span><span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
-
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;image/pred.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;residual std:&#39;</span><span class="p">,</span> <span class="n">sd</span><span class="p">)</span>
 </pre></div>
 
@@ -16008,6 +15958,494 @@ jp-needs-light-background
 </div>
 </div>
 
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">result</span><span class="p">[[</span><span class="s1">&#39;abs_et&#39;</span><span class="p">,</span> <span class="s1">&#39;y_test&#39;</span><span class="p">,</span> <span class="s1">&#39;y_pred&#39;</span><span class="p">]]</span>
+<span class="n">abs_et</span> <span class="o">=</span> <span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">et</span><span class="p">]</span>
+<span class="n">perc</span> <span class="o">=</span> <span class="p">[</span><span class="n">abs_et</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">y_true</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_true</span><span class="p">))]</span>
+<span class="n">r</span><span class="p">[</span><span class="s1">&#39;percent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">perc</span>
+<span class="n">r</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>/tmp/ipykernel_367984/468261559.py:4: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  r[&#39;percent&#39;] = perc
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>abs_et</th>
+      <th>y_test</th>
+      <th>y_pred</th>
+      <th>percent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>29</th>
+      <td>17.766304</td>
+      <td>17.976908</td>
+      <td>35.743212</td>
+      <td>5.318370</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>9.547901</td>
+      <td>20.100000</td>
+      <td>29.647901</td>
+      <td>9.914275</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>9.244439</td>
+      <td>17.400000</td>
+      <td>8.155561</td>
+      <td>13.613458</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>7.688896</td>
+      <td>10.100000</td>
+      <td>17.788896</td>
+      <td>8.802349</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>7.108769</td>
+      <td>30.200000</td>
+      <td>23.091231</td>
+      <td>1.784606</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>6.390843</td>
+      <td>26.400000</td>
+      <td>20.009157</td>
+      <td>9.705128</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>6.339988</td>
+      <td>6.500000</td>
+      <td>12.839988</td>
+      <td>12.559711</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>5.795211</td>
+      <td>28.600000</td>
+      <td>22.804789</td>
+      <td>20.262976</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>4.998052</td>
+      <td>22.400000</td>
+      <td>17.401948</td>
+      <td>16.577328</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>4.932557</td>
+      <td>28.300000</td>
+      <td>33.232557</td>
+      <td>11.747194</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>4.490875</td>
+      <td>23.700000</td>
+      <td>19.209125</td>
+      <td>2.474036</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>4.477291</td>
+      <td>17.000000</td>
+      <td>12.522709</td>
+      <td>97.538278</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>4.031308</td>
+      <td>28.800000</td>
+      <td>24.768692</td>
+      <td>7.186176</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>3.983244</td>
+      <td>7.800000</td>
+      <td>11.783244</td>
+      <td>22.312731</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>3.595308</td>
+      <td>22.600000</td>
+      <td>19.004692</td>
+      <td>76.127686</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>3.436569</td>
+      <td>7.500000</td>
+      <td>10.936569</td>
+      <td>0.980950</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>3.299102</td>
+      <td>16.900000</td>
+      <td>20.199102</td>
+      <td>45.820917</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>3.199838</td>
+      <td>19.300000</td>
+      <td>16.100162</td>
+      <td>47.501997</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.022188</td>
+      <td>22.200000</td>
+      <td>19.177812</td>
+      <td>9.843105</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>2.816814</td>
+      <td>13.800000</td>
+      <td>10.983186</td>
+      <td>8.856442</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2.763136</td>
+      <td>22.000000</td>
+      <td>19.236864</td>
+      <td>22.093638</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>2.679982</td>
+      <td>29.300000</td>
+      <td>26.620018</td>
+      <td>24.207737</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>2.511949</td>
+      <td>28.100000</td>
+      <td>25.588051</td>
+      <td>53.128958</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2.466911</td>
+      <td>21.000000</td>
+      <td>18.533089</td>
+      <td>6.136029</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>2.342085</td>
+      <td>29.100000</td>
+      <td>26.757915</td>
+      <td>51.067237</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>2.032615</td>
+      <td>9.200000</td>
+      <td>11.232615</td>
+      <td>5.337093</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.982855</td>
+      <td>20.000000</td>
+      <td>21.982855</td>
+      <td>10.965889</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>1.948935</td>
+      <td>19.800000</td>
+      <td>17.851065</td>
+      <td>4.334051</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>1.843035</td>
+      <td>33.600000</td>
+      <td>31.756965</td>
+      <td>2.238195</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>1.767799</td>
+      <td>24.600000</td>
+      <td>26.367799</td>
+      <td>98.828472</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>1.576447</td>
+      <td>17.800000</td>
+      <td>16.223553</td>
+      <td>16.579470</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>1.568122</td>
+      <td>14.300000</td>
+      <td>15.868122</td>
+      <td>19.521314</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>1.318310</td>
+      <td>15.300000</td>
+      <td>13.981690</td>
+      <td>20.411694</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>1.121346</td>
+      <td>25.400000</td>
+      <td>26.521346</td>
+      <td>3.555116</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1.011217</td>
+      <td>6.100000</td>
+      <td>7.111217</td>
+      <td>1.730102</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1.009333</td>
+      <td>10.400000</td>
+      <td>9.390667</td>
+      <td>3.610599</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>0.920404</td>
+      <td>15.000000</td>
+      <td>15.920404</td>
+      <td>0.164472</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>0.877531</td>
+      <td>16.500000</td>
+      <td>17.377531</td>
+      <td>8.048402</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.871433</td>
+      <td>9.900000</td>
+      <td>9.028567</td>
+      <td>0.499308</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>0.866544</td>
+      <td>24.000000</td>
+      <td>23.133456</td>
+      <td>8.616406</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>0.693448</td>
+      <td>16.000000</td>
+      <td>16.693448</td>
+      <td>13.997598</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>0.683148</td>
+      <td>12.800000</td>
+      <td>12.116852</td>
+      <td>8.939319</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>0.643476</td>
+      <td>18.100000</td>
+      <td>18.743476</td>
+      <td>1.892238</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.619258</td>
+      <td>34.700000</td>
+      <td>35.319258</td>
+      <td>17.429531</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>0.594163</td>
+      <td>31.400000</td>
+      <td>31.994163</td>
+      <td>15.908442</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>0.451557</td>
+      <td>26.100000</td>
+      <td>26.551557</td>
+      <td>5.485225</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>0.449877</td>
+      <td>20.100000</td>
+      <td>19.650123</td>
+      <td>18.948839</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0.413164</td>
+      <td>16.700000</td>
+      <td>16.286836</td>
+      <td>4.414748</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0.240333</td>
+      <td>24.500000</td>
+      <td>24.259667</td>
+      <td>26.337005</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>0.126325</td>
+      <td>25.300000</td>
+      <td>25.173675</td>
+      <td>9.146695</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>0.041282</td>
+      <td>25.100000</td>
+      <td>25.058718</td>
+      <td>23.538971</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;percent&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">r</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#3%</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;percent&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">r</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#5%</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;percent&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">r</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#10%</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>15.686274509803921
+23.52941176470588
+50.98039215686274
+</pre>
+</div>
 </div>
 
 </div>
